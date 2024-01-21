@@ -32,16 +32,16 @@
 -->
     <div class="w3-sidebar w3-bar-block w3-border-right w3-flat-clouds w3-animate-left" style="display:none" id="mySidebar">
         <button onclick="w3_close()" class="w3-bar-item w3-large w3-button w3-hover-blue-gray">Close &times;</button>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-1'); w3_close()">Attributes</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-1'); w3_close()">Attributi</a>
         <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-4'); w3_close()">Backstory</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-2'); w3_close()">Inv. & NPCs</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-3'); w3_close()">Spell Sheet</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-5'); w3_close()">Notes</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-2'); w3_close()">Inv. & PNG</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-3'); w3_close()">Incantesimi</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-5'); w3_close()">Note</a>
         <div class="w3-dropdown-hover">
             <button class="w3-button w3-hover-blue-gray">Options <i class="fa fa-caret-down"></i></button>
             <div id="menu-options" class="w3-dropdown-content w3-bar-block w3-animate-right">
-                <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="loadNewSheet(); w3_close()">Load Save</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="saveSheet(); w3_close()">Save Sheet</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="loadNewSheet(); w3_close()">Carica scheda</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="saveSheet(); w3_close()">Salva scheda</a>
                 <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="lock()">Lock/Unlock Sheet</a>
                 <div id="lock" class="unlocked w3-padding">Unlocked</div>
             </div>
@@ -67,22 +67,22 @@
             <div id="basic-info" class="w3-col w3-card w3-round w3-margin-bottom">
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="char-name" />
-                    <span class="label">Character Name</span>
+                    <span class="label">Nome</span>
                 </div>
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="level">
-                    <span class="label">Class/Level</span>
+                    <span class="label">Classe/Levello</span>
                 </div>
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="level-two">
-                    <span class="label">Class/Level</span>
+                    <span class="label">Classe/Levello</span>
                 </div>
             </div>
             <!-- Character Info -->
             <div id="character-info" class="w3-col w3-card w3-round">
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="race-class" />
-                    <span class="label">Race</span>
+                    <span class="label">Razza</span>
                 </div>
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="background" />
@@ -90,19 +90,19 @@
                 </div>
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="player-name" />
-                    <span class="label">Player Name</span>
+                    <span class="label">Giocatore</span>
                 </div>
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="exp" />
-                    <span class="label">Experience</span>
+                    <span class="label">Esperienza</span>
                 </div>
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="alignment" />
-                    <span class="label">Alignment</span>
+                    <span class="label">Allineamento</span>
                 </div>
                 <div class="w3-col w3-padding m6 l4">
                     <input type="text" name="deity">
-                    <span class="label">Deity</span>
+                    <span class="label">Divinità</span>
                 </div>
             </div>
         </header>
@@ -112,14 +112,14 @@
         <div id="page-1" class="page w3-container w3-content w3-margin-top" onclick="w3_close()">
             <!-- Top Bar -->
             <div class="w3-col w3-margin-bottom">
-                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Attributes</button>
+                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Attributi</button>
                 <div id="top-bar" class="w3-col w3-center w3-card w3-round w3-animate-opacity">
                     <div class="w3-col w3-padding m4 l2">
                         <div class="input-frame">
                             <input type="text" name="proficiency" maxlength="2" size="2" />
                         </div>
                         <div class="label-frame">
-                            <span class="label">Proficiency Bonus</span>
+                            <span class="label">Bonus competenza</span>
                         </div>
                     </div>
                     <div class="w3-col w3-padding m4 l2">
@@ -127,15 +127,15 @@
                             <input type="text" name="initiative" maxlength="2" size="2" />
                         </div>
                         <div class="label-frame">
-                            <span class="label">Initiative Bonus</span>
+                            <span class="label">Bonus iniziativa</span>
                         </div>
                     </div>
-                    <div class="w3-col w3-padding m4 l2">
+                    <div class="w3-col w3-padding m4 l2" style="display:none">
                         <div class="input-frame">
                             <input class="auto-filled-border" type="text" name="passive-perception" maxlength="2" size="2" />
                         </div>
                         <div class="label-frame">
-                            <span class="label">Passive Perception</span>
+                            <span class="label">Percezione passiva</span>
                         </div>
                     </div>
                     <div class="w3-col w3-padding m4 l2">
@@ -143,7 +143,7 @@
                             <input type="text" name="ac" maxlength="2" size="2" />
                         </div>
                         <div class="label-frame">
-                            <span class="label">Armor Class</span>
+                            <span class="label">Classe armatura</span>
                         </div>
                     </div>
                     <div class="w3-col w3-padding m4 l2">
@@ -151,7 +151,15 @@
                             <input type="text" name="speed" maxlength="2" size="2" />
                         </div>
                         <div class="label-frame">
-                            <span class="label">Speed</span>
+                            <span class="label">Velocità (m)</span>
+                        </div>
+                    </div>
+                    <div class="w3-col w3-padding m4 l2">
+                        <div class="input-frame">
+                            <input type="text" name="speed_hex" maxlength="2" size="2" />
+                        </div>
+                        <div class="label-frame">
+                            <span class="label">Velocità (hex)</span>
                         </div>
                     </div>
                     <div class="w3-col w3-padding m4 l2">
@@ -174,35 +182,35 @@
             </div>
             <!-- Attributes -->
             <div class="w3-col w3-margin-bottom">
-                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Attributes</button>
+                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Attributi</button>
                 <div id="attributes" class="w3-col w3-center w3-card w3-round w3-animate-opacity">
                     <div id="str" class="w3-col w3-padding m4 l2">
-                        <span class="label">Strength</span>
+                        <span class="label">Forza</span>
                         <input type="text" class="att" name="str" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="str-mod" maxlength="2" size="2" />
                     </div>
                     <div id="dex" class="w3-col w3-padding m4 l2">
-                        <span class="label">Dexterity</span>
+                        <span class="label">Destrezza</span>
                         <input type="text" class="att" name="dex" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="dex-mod" maxlength="2" size="2" />
                     </div>
                     <div id="con" class="w3-col w3-padding m4 l2">
-                        <span class="label">Constitution</span>
+                        <span class="label">Costituzione</span>
                         <input type="text" class="att" name="con" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="con-mod" maxlength="2" size="2" />
                     </div>
                     <div id="int" class="w3-col w3-padding m4 l2">
-                        <span class="label">Intelligence</span>
+                        <span class="label">Intelligenza</span>
                         <input type="text" class="att" name="int" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="int-mod" maxlength="2" size="2" />
                     </div>
                     <div id="wis" class="w3-col w3-padding m4 l2">
-                        <span class="label">Wisdom</span>
+                        <span class="label">Saggezza</span>
                         <input type="text" class="att" name="wis" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="wis-mod" maxlength="2" size="2" />
                     </div>
                     <div id="cha" class="w3-col w3-padding m4 l2">
-                        <span class="label">Charisma</span>
+                        <span class="label">Carisma</span>
                         <input type="text" class="att" name="cha" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="cha-mod" maxlength="2" size="2" />
                     </div>
@@ -210,7 +218,7 @@
             </div>
             <!-- Status & Life -->
             <div class="w3-col w3-margin-bottom w3-card w3-round">
-                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Status</button>
+                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Stato</button>
                 <div id="status" class="w3-animate-opacity">
                     <div id="hit-points" class="w3-col w3-padding  m8 l4 w3-border-right">
                         <div id="temp-health" class="w3-col w3-padding">
@@ -221,12 +229,12 @@
                         <div id="current-health" class="w3-col s6 m6 l6">
                             <input type="text" name="current-health" />
                             <br/>
-                            <span class="label">Current Health</span>
+                            <span class="label">PF Correnti</span>
                         </div>
                         <div id="max-health" class="w3-col s6 m6 l6">
                             <input type="text" name="max-health" />
                             <br/>
-                            <span class="label">Maximum Health</span>
+                            <span class="label">PF Massimi</span>
                         </div>
                     </div>
                     <div id="hit-dice" class="w3-col w3-padding m5 l2">
@@ -238,9 +246,9 @@
                         </div>
                     </div>
                     <div id="death-saves" class="w3-col w3-padding m5 l2">
-                        <span class="label">Death Saves</span>
+                        <span class="label">Morte</span>
                         <div id="successes">
-                            <span class="sub-label">Success</span>
+                            <span class="sub-label">Successo</span>
                             <div id="success-num">
                                 <input class="w3-check" type="checkbox" name="success-1" />
                                 <input class="w3-check" type="checkbox" name="success-2" />
@@ -248,7 +256,7 @@
                             </div>
                         </div>
                         <div id="failures" class="">
-                            <span class="sub-label">Failure</span>
+                            <span class="sub-label">Fallimento</span>
                             <div id="failure-num">
                                 <input class="w3-check" type="checkbox" name="failure-1" />
                                 <input class="w3-check" type="checkbox" name="failure-2" />
@@ -268,11 +276,11 @@
             </div>
             <!-- Saves & Skills -->
             <div class="w3-col w3-margin-bottom w3-card w3-round">
-                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Saving Throws & Skills</button>
+                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Tiri salvezza & Abilità</button>
                 <div id="saves-skills" class="w3-col w3-center w3-animate-opacity">
                     <div id="saves" class="w3-col w3-padding w3-left-align l12">
                         <div>
-                            <span class="label">Saving Throws</span>
+                            <span class="label">Tiri salvezza</span>
                         </div>
                         <div>
                             <span class="sub-label">Prof</span>
@@ -280,185 +288,208 @@
                         <div id="str-save" class="box w3-col m4 l2">
                             <input type="checkbox" name="prof" />
                             <input type="text" name="str-save" maxlength="2" size="2" />
-                            <span class="sub-label">Strength</span>
+                            <span class="sub-label">Forza</span>
                         </div>
                         <div id="dex-save" class="box w3-col m4 l2">
                             <input type="checkbox" name="prof" />
                             <input type="text" name="dex-save" maxlength="2" size="2" />
-                            <span class="sub-label">Dexterity</span>
+                            <span class="sub-label">Destrezza</span>
                         </div>
                         <div id="con-save" class="box w3-col m4 l2">
                             <input type="checkbox" name="prof" />
                             <input type="text" name="con-save" maxlength="2" size="2" />
-                            <span class="sub-label">Constitution</span>
+                            <span class="sub-label">Costituzione</span>
                         </div>
                         <div id="int-save" class="box w3-col m4 l2">
                             <input type="checkbox" name="prof" />
                             <input type="text" name="int-save" maxlength="2" size="2" />
-                            <span class="sub-label">Intelligence</span>
+                            <span class="sub-label">Intelligenza</span>
                         </div>
                         <div id="wis-save" class="box w3-col m4 l2">
                             <input type="checkbox" name="prof" />
                             <input type="text" name="wis-save" maxlength="2" size="2" />
-                            <span class="sub-label">Wisdom</span>
+                            <span class="sub-label">Saggezza</span>
                         </div>
                         <div id="cha-save" class="box w3-col m4 l2">
                             <input type="checkbox" name="prof" />
                             <input type="text" name="cha-save" maxlength="2" size="2" />
-                            <span class="sub-label">Charisma</span>
+                            <span class="sub-label">Carisma</span>
                         </div>
                     </div>
                     <div id="skills" class="w3-col w3-padding w3-left-align l2">
                         <div>
-                            <span class="label">Strength</span>
+                            <span class="label">Forza</span>
                         </div>
                         <div>
-                            <span class="sub-label">Prof</span>
-                            <span class="sub-label">Expr</span>
+                            <span class="sub-label">Cap</span>
+                            <span class="sub-label">Abi</span>
+                            <span class="sub-label">Exp</span>
                         </div>
                         <div id="athletics-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="athletics-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Athletics</span>
+                            <span class="sub-label">Atletica</span>
                         </div>
                     </div>
                     <div id="skills" class="w3-col w3-padding w3-left-align l2">
                         <div>
-                            <span class="label">Dexterity</span>
+                            <span class="label">Destrezza</span>
                         </div>
                         <div>
-                            <span class="sub-label">Prof</span>
-                            <span class="sub-label">Expr</span>
+                            <span class="sub-label">Cap</span>
+                            <span class="sub-label">Abi</span>
+                            <span class="sub-label">Exp</span>
                         </div>
                         <div id="acrobatics-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="acrobatics-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Acrobtics</span>
+                            <span class="sub-label">Acrobazia</span>
                         </div>
                         <div id="sleight-hand-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="sleight-hand-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Sleight of Hand</span>
+                            <span class="sub-label">Agilità di mano</span>
                         </div>
                         <div id="stealth-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="stealth-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Stealth</span>
+                            <span class="sub-label">Furtività</span>
                         </div>
                     </div>
                     <div id="skills" class="w3-col w3-padding w3-left-align l2">
                         <div>
-                            <span class="label">Intelligence</span>
+                            <span class="label">intelligenza</span>
                         </div>
                         <div>
-                            <span class="sub-label">Prof</span>
-                            <span class="sub-label">Expr</span>
+                            <span class="sub-label">Cap</span>
+                            <span class="sub-label">Abi</span>
+                            <span class="sub-label">Exp</span>
                         </div>
                         <div id="arcana-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="arcana-skill" maxlength="3" size="3" />
                             <span class="sub-label">Arcana</span>
                         </div>
                         <div id="history-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="history-skill" maxlength="3" size="3" />
-                            <span class="sub-label">History</span>
+                            <span class="sub-label">Storia</span>
                         </div>
                         <div id="investigation-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="investigation-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Investigation</span>
+                            <span class="sub-label">Investigare</span>
                         </div>
                         <div id="religion-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="religion-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Religion</span>
+                            <span class="sub-label">Religione</span>
                         </div>
                     </div>
                     <div id="skills" class="w3-col w3-padding w3-left-align l2">
                         <div>
-                            <span class="label">Wisdom</span>
+                            <span class="label">Saggezza</span>
                         </div>
                         <div>
-                            <span class="sub-label">Prof</span>
-                            <span class="sub-label">Expr</span>
+                            <span class="sub-label">Cap</span>
+                            <span class="sub-label">Abi</span>
+                            <span class="sub-label">Exp</span>
                         </div>
                         <div id="animal-handling-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="animal-handling-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Animal Handling</span>
+                            <span class="sub-label">Trattare con gli animali</span>
                         </div>
                         <div id="insight-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="insight-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Insight</span>
+                            <span class="sub-label">Empatia</span>
                         </div>
                         <div id="medicine-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="medicine-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Medicine</span>
+                            <span class="sub-label">Medicina</span>
                         </div>
                         <div id="nature-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="nature-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Nature</span>
+                            <span class="sub-label">Natura</span>
                         </div>
                         <div id="perception-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="perception-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Perception</span>
+                            <span class="sub-label">Percezione</span>
                         </div>
                         <div id="survival-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="survival-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Survival</span>
+                            <span class="sub-label">Sopravvivenza</span>
                         </div>
                     </div>
                     <div id="skills" class="w3-col w3-padding w3-left-align l2">
                         <div>
-                            <span class="label">Charisma</span>
+                            <span class="label">Carisma</span>
                         </div>
                         <div>
-                            <span class="sub-label">Prof</span>
-                            <span class="sub-label">Expr</span>
+                            <span class="sub-label">Cap</span>
+                            <span class="sub-label">Abi</span>
+                            <span class="sub-label">Exp</span>
                         </div>
                         <div id="deception-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="deception-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Deception</span>
+                            <span class="sub-label">Raggirare</span>
                         </div>
                         <div id="intimidation-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="intimidation-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Intimidation</span>
+                            <span class="sub-label">Intimidire</span>
                         </div>
                         <div id="performance-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="performance-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Performance</span>
+                            <span class="sub-label">Intrattenere</span>
                         </div>
                         <div id="persuasion-skill" class="box">
+                            <input type="checkbox" name="base" />
                             <input type="checkbox" name="prof" />
                             <input type="checkbox" name="expr" />
                             <input type="text" name="persuasion-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Persuasion</span>
+                            <span class="sub-label">Persuasione</span>
                         </div>
                     </div>
                     <div id="spell-att" class="w3-col w3-padding w3-left-align l2">
