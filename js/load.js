@@ -13,6 +13,17 @@ function loadSkill(skillName) {
 
 }
 
+function loadSave(saveName) {
+    var propName = saveName.replaceAll('-', '_');
+
+    $('#page-1 #saves-skills #skills input[name="' + saveName + '-skill"]').val(loadJson.page1.saves_skills.saves[propName].val);
+    console.log(saveName, loadJson.page1.saves_skills.saves[propName]);
+    $('#page-1 #saves-skills #skills #' + saveName + '-skill input[name="base"]').prop("checked", loadJson.page1.saves_skills.saves[propName].base);
+    $('#page-1 #saves-skills #skills #' + saveName + '-skill input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves[propName].prof);
+    $('#page-1 #saves-skills #skills #' + saveName + '-skill input[name="expr"]').prop("checked", loadJson.page1.saves_skills.saves[propName].expr);
+}
+
+
 $(document).ready(function(argument) {
 
     //Change the title to the character name
@@ -55,6 +66,10 @@ $(document).ready(function(argument) {
     $('#page-1 #attributes input[name="wis-mod"]').val(loadJson.page1.attributes.wis_mod);
     $('#page-1 #attributes input[name="cha"]').val(loadJson.page1.attributes.cha);
     $('#page-1 #attributes input[name="cha-mod"]').val(loadJson.page1.attributes.cha_mod);
+    $('#page-1 #attributes input[name="hon"]').val(loadJson.page1.attributes.hon);
+    $('#page-1 #attributes input[name="hon-mod"]').val(loadJson.page1.attributes.hon_mod);
+    $('#page-1 #attributes input[name="san"]').val(loadJson.page1.attributes.san);
+    $('#page-1 #attributes input[name="san-mod"]').val(loadJson.page1.attributes.san_mod);
 
     //Load Skills and Saves	
     $('#page-1 #saves-skills select[name="spell-att"]').val(loadJson.page1.saves_skills.spell_casting);
@@ -62,18 +77,14 @@ $(document).ready(function(argument) {
         $('#saves-skills select[name="spell-att"]').val('none').change();
     }
 
-    $('#page-1 #saves-skills #saves input[name="str-save"]').val(loadJson.page1.saves_skills.saves.str_save.val);
-    $('#page-1 #saves-skills #saves #str-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.str_save.prof);
-    $('#page-1 #saves-skills #saves input[name="dex-save"]').val(loadJson.page1.saves_skills.saves.dex_save.val);
-    $('#page-1 #saves-skills #saves #dex-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.dex_save.prof);
-    $('#page-1 #saves-skills #saves input[name="con-save"]').val(loadJson.page1.saves_skills.saves.con_save.val);
-    $('#page-1 #saves-skills #saves #con-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.con_save.prof);
-    $('#page-1 #saves-skills #saves input[name="int-save"]').val(loadJson.page1.saves_skills.saves.int_save.val);
-    $('#page-1 #saves-skills #saves #int-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.int_save.prof);
-    $('#page-1 #saves-skills #saves input[name="wis-save"]').val(loadJson.page1.saves_skills.saves.wis_save.val);
-    $('#page-1 #saves-skills #saves #wis-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.wis_save.prof);
-    $('#page-1 #saves-skills #saves input[name="cha-save"]').val(loadJson.page1.saves_skills.saves.cha_save.val);
-    $('#page-1 #saves-skills #saves #cha-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.cha_save.prof);
+    loadSave('str-save');
+    loadSave('dex-save');
+    loadSave('con-save');
+    loadSave('int-save');
+    loadSave('wis-save');
+    loadSave('cha-save');
+    loadSave('hon-save');
+    loadSave('san-save');
 
     loadSkill('acrobatics');
     loadSkill('animal-handling');
@@ -93,10 +104,6 @@ $(document).ready(function(argument) {
     loadSkill('sleight-hand');
     loadSkill('stealth');
     loadSkill('survival');
-
-    //$('#page-1 #saves-skills #skills input[name="animal-handling-skill"]').val(loadJson.page1.saves_skills.skills.animal_handling.val);
-    //$('#page-1 #saves-skills #skills #animal-handling-skill input[name="prof"]').prop("checked", loadJson.page1.saves_skills.skills.animal_handling.prof);
-    //$('#page-1 #saves-skills #skills #animal-handling-skill input[name="expr"]').prop("checked", loadJson.page1.saves_skills.skills.animal_handling.expr)
 
     //Load Status
     $('#page-1 #status #conditions textarea[name="conditions"]').val(loadJson.page1.status.conditions);

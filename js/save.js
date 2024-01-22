@@ -114,35 +114,23 @@ function saveSheet(argument) {
                 wis: $('#page-1 #attributes input[name="wis"]').val(),
                 wis_mod: $('#page-1 #attributes input[name="wis-mod"]').val(),
                 cha: $('#page-1 #attributes input[name="cha"]').val(),
-                cha_mod: $('#page-1 #attributes input[name="cha-mod"]').val()
+                cha_mod: $('#page-1 #attributes input[name="cha-mod"]').val(),
+                hon: $('#page-1 #attributes input[name="hon"]').val(),
+                hon_mod: $('#page-1 #attributes input[name="hon-mod"]').val(),
+                san: $('#page-1 #attributes input[name="san"]').val(),
+                san_mod: $('#page-1 #attributes input[name="san-mod"]').val()
             },
             saves_skills: {
                 spell_casting: $('#page-1 #saves-skills select[name="spell-att"]').val(),
                 saves: {
-                    str_save: {
-                        val: $('#page-1 #saves-skills #saves input[name="str-save"]').val(),
-                        prof: $('#page-1 #saves-skills #saves #str-save input[name="prof"]').prop("checked")
-                    },
-                    dex_save: {
-                        val: $('#page-1 #saves-skills #saves input[name="dex-save"]').val(),
-                        prof: $('#page-1 #saves-skills #saves #dex-save input[name="prof"]').prop("checked")
-                    },
-                    con_save: {
-                        val: $('#page-1 #saves-skills #saves input[name="con-save"]').val(),
-                        prof: $('#page-1 #saves-skills #saves #con-save input[name="prof"]').prop("checked")
-                    },
-                    int_save: {
-                        val: $('#page-1 #saves-skills #saves input[name="int-save"]').val(),
-                        prof: $('#page-1 #saves-skills #saves #int-save input[name="prof"]').prop("checked")
-                    },
-                    wis_save: {
-                        val: $('#page-1 #saves-skills #saves input[name="wis-save"]').val(),
-                        prof: $('#page-1 #saves-skills #saves #wis-save input[name="prof"]').prop("checked")
-                    },
-                    cha_save: {
-                        val: $('#page-1 #saves-skills #saves input[name="cha-save"]').val(),
-                        prof: $('#page-1 #saves-skills #saves #cha-save input[name="prof"]').prop("checked")
-                    },
+                    str_save: getSkill('str-save'),
+                    dex_save: getSkill('dex-save'),
+                    con_save: getSkill('con-save'),
+                    int_save: getSkill('int-save'),
+                    wis_save: getSkill('wis-save'),
+                    cha_save: getSkill('cha-save'),
+                    hon_save: getSkill('hon-save'),
+                    san_save: getSkill('san-save')
                 },
                 skills: {
                     acrobatics: getSkill('acrobatics'),

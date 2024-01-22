@@ -188,6 +188,7 @@ function updateStrSkills() {
     var prof = parseInt($('#top-bar input[name="proficiency"]').val()) || 0;
     var base = parseInt($('#attributes input[name="str-mod"]').val()) || 0;
     updateSkill(base, prof, "athletics");
+    updateSkill(base, prof, "str-save");
 }
 
 function updateDexSkills() {
@@ -196,6 +197,13 @@ function updateDexSkills() {
     updateSkill(base, prof, "acrobatics");
     updateSkill(base, prof, "sleight-hand");
     updateSkill(base, prof, "stealth");
+    updateSkill(base, prof, "dex-save");
+}
+
+function updateConSkills() {
+    var prof = parseInt($('#top-bar input[name="proficiency"]').val()) || 0;
+    var base = parseInt($('#attributes input[name="con-mod"]').val()) || 0;
+    updateSkill(base, prof, "con-save");
 }
 
 function updateIntSkills() {
@@ -206,6 +214,7 @@ function updateIntSkills() {
     updateSkill(base, prof, "history");
     updateSkill(base, prof, "investigation");
     updateSkill(base, prof, "religion");
+    updateSkill(base, prof, "int-save");
 }
 
 function updateWisSkills() {
@@ -218,6 +227,7 @@ function updateWisSkills() {
     updateSkill(base, prof, "nature");
     updateSkill(base, prof, "perception");
     updateSkill(base, prof, "survival");
+    updateSkill(base, prof, "wis-save");
 }
 
 function updateChaSkills() {
@@ -228,6 +238,21 @@ function updateChaSkills() {
     updateSkill(base, prof, "intimidation");
     updateSkill(base, prof, "performance");
     updateSkill(base, prof, "persuasion");
+    updateSkill(base, prof, "cha-save");
+}
+
+function updateHonSkills() {
+    var prof = parseInt($('#top-bar input[name="proficiency"]').val()) || 0;
+    var base = parseInt($('#attributes input[name="hon-mod"]').val()) || 0;
+
+    updateSkill(base, prof, "hon-save");
+}
+
+function updateSanSkills() {
+    var prof = parseInt($('#top-bar input[name="proficiency"]').val()) || 0;
+    var base = parseInt($('#attributes input[name="san-mod"]').val()) || 0;
+
+    updateSkill(base, prof, "san-save");
 }
 
 
@@ -454,6 +479,7 @@ $('document').ready(function(argument) {
             return;
 
         updateMod('con', $('#attributes input[name="con"]').val());
+        updateConSkills();
     });
 
     //Run when intelligence changes
@@ -484,6 +510,24 @@ $('document').ready(function(argument) {
         updateChaSkills();
     });
 
+    //Run when honor changes
+    $('#attributes input[name="hon"]').on('input', function(argument) {
+        if (LOCKED)
+            return;
+
+        updateMod('hon', $('#attributes input[name="hon"]').val());
+        updateHonSkills();
+    });
+
+    //Run when sanity changes
+    $('#attributes input[name="san"]').on('input', function(argument) {
+        if (LOCKED)
+            return;
+
+        updateMod('san', $('#attributes input[name="san"]').val());
+        updateSanSkills();
+    });
+
     //Run misc att changes
     $('#attributes input').on('input', function(argument) {
         if (LOCKED)
@@ -502,10 +546,13 @@ $('document').ready(function(argument) {
         updateStrMisc();
         updateDexSkills();
         updateDexMisc();
+        updateConSkills();
         updateIntSkills();
         updateWisSkills();
         updateWisMisc();
         updateChaSkills();
+        updateHonSkills();
+        updateSanSkills();
         updateSaves();
         updateSpells();
     });
@@ -530,10 +577,13 @@ $('document').ready(function(argument) {
             updateStrMisc();
             updateDexSkills();
             updateDexMisc();
+            updateConSkills();
             updateIntSkills();
             updateWisSkills();
             updateWisMisc();
             updateChaSkills();
+            updateHonSkills();
+            updateSanSkills();
         });
     });
 
@@ -546,10 +596,13 @@ $('document').ready(function(argument) {
             updateStrMisc();
             updateDexSkills();
             updateDexMisc();
+            updateConSkills();
             updateIntSkills();
             updateWisSkills();
             updateWisMisc();
             updateChaSkills();
+            updateHonSkills();
+            updateSanSkills();
         });
     });
 
@@ -562,10 +615,13 @@ $('document').ready(function(argument) {
             updateStrMisc();
             updateDexSkills();
             updateDexMisc();
+            updateConSkills();
             updateIntSkills();
             updateWisSkills();
             updateWisMisc();
             updateChaSkills();
+            updateHonSkills();
+            updateSanSkills();
         });
     });
 

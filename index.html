@@ -184,35 +184,45 @@
             <div class="w3-col w3-margin-bottom">
                 <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Attributi</button>
                 <div id="attributes" class="w3-col w3-center w3-card w3-round w3-animate-opacity">
-                    <div id="str" class="w3-col w3-padding m4 l2">
+                    <div id="str" class="w3-col w3-padding m6 l3">
                         <span class="label">Forza</span>
                         <input type="text" class="att" name="str" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="str-mod" maxlength="2" size="2" />
                     </div>
-                    <div id="dex" class="w3-col w3-padding m4 l2">
+                    <div id="dex" class="w3-col w3-padding m6 l3">
                         <span class="label">Destrezza</span>
                         <input type="text" class="att" name="dex" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="dex-mod" maxlength="2" size="2" />
                     </div>
-                    <div id="con" class="w3-col w3-padding m4 l2">
+                    <div id="con" class="w3-col w3-padding m6 l3">
                         <span class="label">Costituzione</span>
                         <input type="text" class="att" name="con" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="con-mod" maxlength="2" size="2" />
                     </div>
-                    <div id="int" class="w3-col w3-padding m4 l2">
+                    <div id="int" class="w3-col w3-padding m6 l3">
                         <span class="label">Intelligenza</span>
                         <input type="text" class="att" name="int" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="int-mod" maxlength="2" size="2" />
                     </div>
-                    <div id="wis" class="w3-col w3-padding m4 l2">
+                    <div id="wis" class="w3-col w3-padding m6 l3">
                         <span class="label">Saggezza</span>
                         <input type="text" class="att" name="wis" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="wis-mod" maxlength="2" size="2" />
                     </div>
-                    <div id="cha" class="w3-col w3-padding m4 l2">
+                    <div id="cha" class="w3-col w3-padding m6 l3">
                         <span class="label">Carisma</span>
                         <input type="text" class="att" name="cha" maxlength="2" size="2" />
                         <input type="text" class="att-mod auto-filled-border" name="cha-mod" maxlength="2" size="2" />
+                    </div>
+                    <div id="hon" class="w3-col w3-padding m6 l3">
+                        <span class="label">Onore</span>
+                        <input type="text" class="att" name="hon" maxlength="2" size="2" />
+                        <input type="text" class="att-mod auto-filled-border" name="hon-mod" maxlength="2" size="2" />
+                    </div>
+                    <div id="san" class="w3-col w3-padding m6 l3">
+                        <span class="label">Sanità</span>
+                        <input type="text" class="att" name="san" maxlength="2" size="2" />
+                        <input type="text" class="att-mod auto-filled-border" name="san-mod" maxlength="2" size="2" />
                     </div>
                 </div>
             </div>
@@ -278,7 +288,7 @@
             <div class="w3-col w3-margin-bottom w3-card w3-round">
                 <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Tiri salvezza & Abilità</button>
                 <div id="saves-skills" class="w3-col w3-center w3-animate-opacity">
-                    <div id="saves" class="w3-col w3-padding w3-left-align l12">
+                    <div id="saves" class="w3-col w3-padding w3-left-align l12" style="display: none;">
                         <div>
                             <span class="label">Tiri salvezza</span>
                         </div>
@@ -316,7 +326,8 @@
                             <span class="sub-label">Carisma</span>
                         </div>
                     </div>
-                    <div id="skills" class="w3-col w3-padding w3-left-align l2">
+
+                    <div id="skills" class="w3-col w3-padding w3-left-align l3">
                         <div>
                             <span class="label">Forza</span>
                         </div>
@@ -324,6 +335,13 @@
                             <span class="sub-label">Cap</span>
                             <span class="sub-label">Abi</span>
                             <span class="sub-label">Exp</span>
+                        </div>
+                        <div id="str-save-skill" class="box">
+                            <input type="checkbox" name="base" />
+                            <input type="checkbox" name="prof" />
+                            <input type="checkbox" name="expr" />
+                            <input type="text" name="str-save-skill" maxlength="3" size="3" />
+                            <span class="sub-label">Tiro salvezza</span>
                         </div>
                         <div id="athletics-skill" class="box">
                             <input type="checkbox" name="base" />
@@ -333,7 +351,7 @@
                             <span class="sub-label">Atletica</span>
                         </div>
                     </div>
-                    <div id="skills" class="w3-col w3-padding w3-left-align l2">
+                    <div id="skills" class="w3-col w3-padding w3-left-align l3">
                         <div>
                             <span class="label">Destrezza</span>
                         </div>
@@ -341,6 +359,13 @@
                             <span class="sub-label">Cap</span>
                             <span class="sub-label">Abi</span>
                             <span class="sub-label">Exp</span>
+                        </div>
+                        <div id="dex-save-skill" class="box">
+                            <input type="checkbox" name="base" />
+                            <input type="checkbox" name="prof" />
+                            <input type="checkbox" name="expr" />
+                            <input type="text" name="dev-save-skill" maxlength="3" size="3" />
+                            <span class="sub-label">Tiro salvezza</span>
                         </div>
                         <div id="acrobatics-skill" class="box">
                             <input type="checkbox" name="base" />
@@ -364,14 +389,38 @@
                             <span class="sub-label">Furtività</span>
                         </div>
                     </div>
-                    <div id="skills" class="w3-col w3-padding w3-left-align l2">
+                    <div id="skills" class="w3-col w3-padding w3-left-align l3">
                         <div>
-                            <span class="label">intelligenza</span>
+                            <span class="label">Costituzione</span>
                         </div>
                         <div>
                             <span class="sub-label">Cap</span>
                             <span class="sub-label">Abi</span>
                             <span class="sub-label">Exp</span>
+                        </div>
+                        <div id="con-save-skill" class="box">
+                            <input type="checkbox" name="base" />
+                            <input type="checkbox" name="prof" />
+                            <input type="checkbox" name="expr" />
+                            <input type="text" name="con-save-skill" maxlength="3" size="3" />
+                            <span class="sub-label">Tiro salvezza</span>
+                        </div>
+                    </div>
+                    <div id="skills" class="w3-col w3-padding w3-left-align l3">
+                        <div>
+                            <span class="label">Intelligenza</span>
+                        </div>
+                        <div>
+                            <span class="sub-label">Cap</span>
+                            <span class="sub-label">Abi</span>
+                            <span class="sub-label">Exp</span>
+                        </div>
+                        <div id="int-save-skill" class="box">
+                            <input type="checkbox" name="base" />
+                            <input type="checkbox" name="prof" />
+                            <input type="checkbox" name="expr" />
+                            <input type="text" name="int-save-skill" maxlength="3" size="3" />
+                            <span class="sub-label">Tiro salvezza</span>
                         </div>
                         <div id="arcana-skill" class="box">
                             <input type="checkbox" name="base" />
@@ -402,7 +451,7 @@
                             <span class="sub-label">Religione</span>
                         </div>
                     </div>
-                    <div id="skills" class="w3-col w3-padding w3-left-align l2">
+                    <div id="skills" class="w3-col w3-padding w3-left-align l3">
                         <div>
                             <span class="label">Saggezza</span>
                         </div>
@@ -410,6 +459,13 @@
                             <span class="sub-label">Cap</span>
                             <span class="sub-label">Abi</span>
                             <span class="sub-label">Exp</span>
+                        </div>
+                        <div id="wis-save-skill" class="box">
+                            <input type="checkbox" name="base" />
+                            <input type="checkbox" name="prof" />
+                            <input type="checkbox" name="expr" />
+                            <input type="text" name="wis-save-skill" maxlength="3" size="3" />
+                            <span class="sub-label">Tiro salvezza</span>
                         </div>
                         <div id="animal-handling-skill" class="box">
                             <input type="checkbox" name="base" />
@@ -454,7 +510,7 @@
                             <span class="sub-label">Sopravvivenza</span>
                         </div>
                     </div>
-                    <div id="skills" class="w3-col w3-padding w3-left-align l2">
+                    <div id="skills" class="w3-col w3-padding w3-left-align l3">
                         <div>
                             <span class="label">Carisma</span>
                         </div>
@@ -462,6 +518,13 @@
                             <span class="sub-label">Cap</span>
                             <span class="sub-label">Abi</span>
                             <span class="sub-label">Exp</span>
+                        </div>
+                        <div id="cha-save-skill" class="box">
+                            <input type="checkbox" name="base" />
+                            <input type="checkbox" name="prof" />
+                            <input type="checkbox" name="expr" />
+                            <input type="text" name="cha-save-skill" maxlength="3" size="3" />
+                            <span class="sub-label">Tiro salvezza</span>
                         </div>
                         <div id="deception-skill" class="box">
                             <input type="checkbox" name="base" />
@@ -492,6 +555,41 @@
                             <span class="sub-label">Persuasione</span>
                         </div>
                     </div>
+                    <div id="skills" class="w3-col w3-padding w3-left-align l3">
+                        <div>
+                            <span class="label">Onore</span>
+                        </div>
+                        <div>
+                            <span class="sub-label">Cap</span>
+                            <span class="sub-label">Abi</span>
+                            <span class="sub-label">Exp</span>
+                        </div>
+                        <div id="hon-save-skill" class="box">
+                            <input type="checkbox" name="base" />
+                            <input type="checkbox" name="prof" />
+                            <input type="checkbox" name="expr" />
+                            <input type="text" name="hon-save-skill" maxlength="3" size="3" />
+                            <span class="sub-label">Tiro salvezza</span>
+                        </div>
+                    </div>
+                    <div id="skills" class="w3-col w3-padding w3-left-align l3">
+                        <div>
+                            <span class="label">Sanità</span>
+                        </div>
+                        <div>
+                            <span class="sub-label">Cap</span>
+                            <span class="sub-label">Abi</span>
+                            <span class="sub-label">Exp</span>
+                        </div>
+                        <div id="san-save-skill" class="box">
+                            <input type="checkbox" name="base" />
+                            <input type="checkbox" name="prof" />
+                            <input type="checkbox" name="expr" />
+                            <input type="text" name="san-save-skill" maxlength="3" size="3" />
+                            <span class="sub-label">Tiro salvezza</span>
+                        </div>
+                    </div>
+
                     <div id="spell-att" class="w3-col w3-padding w3-left-align l2">
                         <div>
                             <span class="label">Spell Save DC</span>
