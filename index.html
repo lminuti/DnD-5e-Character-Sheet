@@ -31,14 +31,14 @@
 	page-5: Notes
 -->
     <div class="w3-sidebar w3-bar-block w3-border-right w3-flat-clouds w3-animate-left" style="display:none" id="mySidebar">
-        <button onclick="w3_close()" class="w3-bar-item w3-large w3-button w3-hover-blue-gray">Close &times;</button>
+        <button onclick="w3_close()" class="w3-bar-item w3-large w3-button w3-hover-blue-gray">Chiudi &times;</button>
         <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-1'); w3_close()">Attributi</a>
         <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-4'); w3_close()">Backstory</a>
         <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-2'); w3_close()">Inv. & PNG</a>
         <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-3'); w3_close()">Incantesimi</a>
         <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-5'); w3_close()">Note</a>
         <div class="w3-dropdown-hover">
-            <button class="w3-button w3-hover-blue-gray">Options <i class="fa fa-caret-down"></i></button>
+            <button class="w3-button w3-hover-blue-gray">Opzioni <i class="fa fa-caret-down"></i></button>
             <div id="menu-options" class="w3-dropdown-content w3-bar-block w3-animate-right">
                 <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="loadNewSheet(); w3_close()">Carica scheda</a>
                 <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="saveSheet(); w3_close()">Salva scheda</a>
@@ -63,6 +63,7 @@
         <!-- Header -->
         <!-- Header -->
         <!-- Basic Info -->
+
         <header id="character-basic-info" class="page-width w3-container w3-content w3-margin-top">
             <div id="basic-info" class="w3-col w3-card w3-round w3-margin-bottom">
                 <div class="w3-col w3-padding m6 l4">
@@ -612,15 +613,15 @@
                     <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Proficiencies</button>
                     <div id="prof" class="w3-card w3-padding w3-round w3-animate-opacity">
                         <div id="weapons-armor">
-                            <span class="label">Weapons & Armor</span>
+                            <span class="label">Armi & Armature</span>
                             <textarea name="weapons-armor" rows="3"></textarea>
                         </div>
                         <div id="tools">
-                            <span class="label">Tools</span>
+                            <span class="label">Strumenti</span>
                             <textarea name="tools" rows="3"></textarea>
                         </div>
                         <div id="languages">
-                            <span class="label">Known Languages</span>
+                            <span class="label">Linguaggi conosciuti</span>
                             <textarea name="languages" rows="3"></textarea>
                         </div>
                     </div>
@@ -744,23 +745,23 @@
             </div>
             <!-- Attacks -->
             <div class="w3-col w3-margin-bottom l8">
-                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Attacks</button>
+                <button class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Attacchi</button>
                 <div id="attacks-spells" class="w3-card w3-padding w3-round w3-animate-opacity">
                     <table id="attacks">
                         <tr>
-                            <th>Name</th>
-                            <th>Base Stat</th>
+                            <th>Nome</th>
+                            <th>Attributo</th>
                             <th>Bonus/DC</th>
-                            <th>Damage</th>
-                            <th>Damage Type</th>
+                            <th>Danno</th>
+                            <th>Tipo</th>
                         </tr>
                     </table>
                     <div id="add-attack">
-                        <span class="label title">Add a new attack:</span>
+                        <span class="label title">Aggiungi nuovo attacco:</span>
                         <div id="attack-form">
                             <div id="att-name" class="w3-rest w3-padding w3-card">
                                 <input type="text" name="name" />
-                                <span class="label">Name of the attack</span>
+                                <span class="label">Nome</span>
                             </div>
                             <div id="attack-stack" class="w3-rest w3-padding w3-card">
                                 <select name="stat">
@@ -771,18 +772,18 @@
 						<option value="wis">Wisdom</option>
 						<option value="cha">Charisma</option>
 					</select>
-                                <span class="label">Choose the base Stat</span>
+                                <span class="label">Attributo</span>
                             </div>
                             <div id="attack-type" class="w3-rest w3-padding w3-card">
                                 <select name="type">
 						<option value="toHit">Roll to hit</option>
 						<option value="save">Save DC</option>
 					</select>
-                                <span class="label">Choose the type of attack</span>
+                                <span class="label">Tipo di attacco</span>
                             </div>
                             <div id="attack-prof" class="w3-rest w3-padding w3-card">
                                 <input type="checkbox" name="proficiency">
-                                <span class="sub-label">Add Proficency</span>
+                                <span class="sub-label">Competente</span>
                             </div>
                             <div id="attack-dc" class="w3-rest w3-padding w3-card" style="display: none;">
                                 <input type="text" name="dc" />
@@ -792,7 +793,7 @@
                             </div>
                             <div id="attack-dice" class="w3-rest w3-padding w3-card">
                                 <input type="text" name="dice" />
-                                <span class="label">Enter Dice</span>
+                                <span class="label">Tipo di dado</span>
                             </div>
                             <div id="attack-bonus" class="w3-rest w3-padding w3-card">
                                 <input type="text" name="bonus" />
@@ -800,9 +801,9 @@
                             </div>
                             <div id="attack-dmg-type" class="w3-rest w3-padding w3-card">
                                 <input type="text" name="dmg-type">
-                                <span class="label">Damage Type</span>
+                                <span class="label">Tipo di danno</span>
                             </div>
-                            <button class="button w3-button w3-blue-gray w3-round-large" onclick="att_attack()">Add Attack</button>
+                            <button class="button w3-button w3-blue-gray w3-round-large" onclick="att_attack()">Aggiungi</button>
                         </div>
                     </div>
                 </div>
