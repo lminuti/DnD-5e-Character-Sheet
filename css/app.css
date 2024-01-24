@@ -7,6 +7,10 @@ select {
     outline: none;
 }
 
+.main-header {
+    padding: 8px 16px;
+}
+
 textarea {
     width: 100%;
     resize: none;
@@ -91,10 +95,30 @@ textarea {
     margin-bottom: 16px;
 }
 
-.page,
-.page-width {
-    max-width: 80%;
-    margin: auto;
+.w3-container {
+    padding: 0 !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.character-basic-info {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:993px){
+    #character-basic-info {
+        margin-top: 0 !important;
+    }
+    .page,
+    .page-width {
+        max-width: 100%;
+        margin: auto;
+    }
+    
 }
 
 #top-bar .label {

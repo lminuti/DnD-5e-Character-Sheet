@@ -9,6 +9,11 @@ function openPage(pageName) {
 
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
+    const content = document.getElementById("main-content");
+    content.removeEventListener('click', w3_close);
+    setTimeout(() => {
+        content.addEventListener('click', w3_close);
+    }, 100);
 }
 
 function w3_close() {
